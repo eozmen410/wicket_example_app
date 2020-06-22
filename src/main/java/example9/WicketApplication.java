@@ -1,5 +1,6 @@
 package example9;
 
+import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -27,7 +28,8 @@ public class WicketApplication extends WebApplication
 	public void init()
 	{
 		super.init();
-
-		// add your configuration here
+		mountPage("count", CountPage.class);
+//		Session.get().setAttribute("count", 10);
+////		Session.get().bind();
 	}
 }

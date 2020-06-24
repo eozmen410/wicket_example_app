@@ -9,8 +9,8 @@ public class CountPage extends WebPage {
 
     public CountPage(final PageParameters parameters) {
         super(parameters);
-        add(new CountForm("myCountForm"));
         Session.get().setAttribute("count", 10);
 		Session.get().bind();
+        add(new CountForm("myCountForm"));
     }
 }

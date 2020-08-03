@@ -29,7 +29,6 @@ public class WicketApplication extends WebApplication
 	{
 		super.init();
 		mountPage("count", CountPage.class);
-//		Session.get().setAttribute("count", 10);
-////		Session.get().bind();
+		getCspSettings().blocking().strict().reportBack();
 	}
 }
